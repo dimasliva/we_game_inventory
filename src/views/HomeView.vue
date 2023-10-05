@@ -5,7 +5,7 @@
   <div class="container">
     <h1 class="banner"></h1>
     <div class="logo">
-      <img src="@/assets/logo.png"/>
+      <img src="@/images/logo.png"/>
     </div>
     <div class="btn">
       <button>Играть</button>
@@ -14,9 +14,9 @@
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati hic ex placeat veritatis eum blanditiis optio, vel voluptatibus laboriosam consequatur. Ex possimus molestiae sapiente. Libero quibusdam molestias quia dicta.
     </div>
     <div class="socials">
-      <img src="@/assets/class.png"/>
-      <img src="@/assets/gos.png"/>
-      <img src="@/assets/vk.svg"/>
+      <img src="@/images/class.png"/>
+      <img src="@/images/gos.png"/>
+      <img src="@/images/vk.svg"/>
     </div>
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, consequatur esse. Quisquam, iste alias aspernatur in est porro, eaque nobis suscipit laboriosam repellat dolore perspiciatis sunt vero reiciendis optio praesentium.
@@ -56,12 +56,13 @@
   .socials {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 75px;
     width: 100%;
     margin: 10px 0px;
   }
   .socials img {
     height: 100%;
+    margin: 0px 20px;
   } 
 </style>
