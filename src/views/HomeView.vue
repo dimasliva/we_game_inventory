@@ -1,4 +1,15 @@
-<script setup>
+<script>
+export default {
+    name: 'my-component',
+    data () {
+      return {}
+    },
+    methods: {
+      onPlay() {
+        window.location='https://t.me/thesimsonline_bot';
+      }
+    }
+}
 </script>
 
 <template>
@@ -8,15 +19,21 @@
       <img src="@/images/logo.png"/>
     </div>
     <div class="btn">
-      <button>Играть</button>
+      <button @click="onPlay">Играть</button>
     </div>
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati hic ex placeat veritatis eum blanditiis optio, vel voluptatibus laboriosam consequatur. Ex possimus molestiae sapiente. Libero quibusdam molestias quia dicta.
     </div>
     <div class="socials">
-      <img src="@/images/class.png"/>
-      <img src="@/images/gos.png"/>
-      <img src="@/images/vk.svg"/>
+      <a href="https://t.me/thesimsonline_bot">
+        <img src="@/images/class.png"/>
+      </a>
+      <a href="https://t.me/thesimsonline_bot">
+        <img src="@/images/gos.png"/>
+      </a>
+      <a href="https://t.me/thesimsonline_bot">
+        <img src="@/images/vk.svg"/>
+      </a>
     </div>
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, consequatur esse. Quisquam, iste alias aspernatur in est porro, eaque nobis suscipit laboriosam repellat dolore perspiciatis sunt vero reiciendis optio praesentium.
@@ -52,6 +69,7 @@
     color: white;
     font-size: 20px;
     border-radius: 4px;
+    cursor: pointer;
   }
   .socials {
     display: flex;
@@ -61,8 +79,11 @@
     width: 100%;
     margin: 10px 0px;
   }
-  .socials img {
+  .socials img, .socials a {
     height: 100%;
     margin: 0px 20px;
   } 
+  .socials img:hover, .socials a:hover {
+    background-color: transparent;
+  }
 </style>
