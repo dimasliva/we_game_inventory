@@ -22,7 +22,7 @@ export default {
       <button @click="onPlay">Играть</button>
     </div>
     <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati hic ex placeat veritatis eum blanditiis optio, vel voluptatibus laboriosam consequatur. Ex possimus molestiae sapiente. Libero quibusdam molestias quia dicta.
+      «Обследование в приёмном покое подтвердило первоначальный диагноз: не к нам, а в шестую больницу!» © https://anekdoty.ru/
     </div>
     <div class="socials">
       <a href="https://t.me/thesimsonline_bot">
@@ -36,8 +36,7 @@ export default {
       </a>
     </div>
     <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, consequatur esse. Quisquam, iste alias aspernatur in est porro, eaque nobis suscipit laboriosam repellat dolore perspiciatis sunt vero reiciendis optio praesentium.
-    </div>
+      При простуде эффективнее пить не молоко с мёдом, а коньяк с медсестрой.© https://anekdoty.ru/</div>
   </div>
 </template>
 <style scoped>
@@ -46,19 +45,24 @@ export default {
     flex-direction: column;
     align-items: center;
     padding: 40px;
+    overflow:hidden;
+    height: 100%;
+    width: 100%;
   }
   .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 210px;
+    height: 110px;
+    width: 100%;
   }
   .logo img {
+    width: 100%;
     height: 100%;
   }
   .btn {
     margin: 20px 0px;
-    height: 60px;
+    height: 30px;
     width: 50%;
   }
   .btn button {
@@ -67,7 +71,7 @@ export default {
     border: 0;
     background-color: green;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 4px;
     cursor: pointer;
   }
@@ -75,13 +79,13 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 75px;
+    height: 60px;
     width: 100%;
     margin: 10px 0px;
   }
   .socials img, .socials a {
     height: 100%;
-    margin: 0px 20px;
+    margin: 0px 10px;
   } 
   .socials img:hover, .socials a:hover {
     background-color: transparent;
