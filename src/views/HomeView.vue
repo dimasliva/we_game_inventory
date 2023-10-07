@@ -1,12 +1,12 @@
 <script>
 export default {
-    name: 'my-component',
+    name: 'Home',
     data () {
       return {}
     },
     methods: {
       onPlay() {
-        window.location='https://t.me/thesimsonline_bot';
+        window.location.href = "https://t.me/thesimsonline_bot"
       }
     }
 }
