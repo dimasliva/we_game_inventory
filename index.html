@@ -6,8 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
     <base href="./">
-    <script type="module" crossorigin src="/we_game_inventory/assets/index-16810832.js"></script>
-    <link rel="stylesheet" href="/we_game_inventory/assets/index-5b72b89a.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script> 
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script> 
+<link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script>
+
+    </script>
+<script>
+$(document).ready(function(){
+  new DataTable('#example', {
+    ajax: '/arrays.txt',
+    columnDefs: [
+        {
+            // The `data` parameter refers to the data for the cell (defined by the
+            // `data` option, which defaults to the column being worked with, in
+            // this case `data: 0`.
+            render: (data, type, row) => data + ' (' + row[3] + ')',
+            targets: 0
+        },
+        { visible: false, targets: [3] }
+    ]
+});
+});
+</script>
+    <script type="module" crossorigin src="/we_game_inventory/assets/index-9e6396b2.js"></script>
+    <link rel="stylesheet" href="/we_game_inventory/assets/index-1f2a4723.css">
   </head>
   <body>
     <div id="app"></div>
