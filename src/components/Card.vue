@@ -120,7 +120,7 @@ export default {
 }
  .clash-card__image {
 	 position: relative;
-	 height: 192px;
+	 height: 40%;
 }
  .clash-card__image--barbarian {
     position: relative;
