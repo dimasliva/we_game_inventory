@@ -43,8 +43,8 @@ export default {
 </script>
 
 <template>
-  <main>
-    <section>
+  <main class="container">
+    <section class="section">
       <div class="grid-container">
         <!-- section titles -->
 
@@ -75,7 +75,7 @@ export default {
     </section>
     
     <!-- hotbar section -->
-    <section>
+    <section class="section">
       <div class="hotbar-grid-container">
         <div class="title">Инвентарь</div> 
 
@@ -100,7 +100,14 @@ export default {
 </template>
 <style scoped>
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
   overflow-y: auto;
+}
+.section {
+  height: 44%;
 }
 .clicked {
   background-color: yellow;
@@ -151,10 +158,18 @@ export default {
   flex-direction: column;
 	 opacity: 0.6;
 	 background: #000;
-	 padding: 1% 1% 1.5% 1%;
 	 grid-gap: 1%;
 	 text-align: center;
-	 max-height: 30em;
+   height: 100%;
+}
+.hotbar-grid-container {
+	 display: grid;
+	 opacity: 0.6;
+	 background: #000;
+	 padding: 1% 1% 1% 1%;
+	 grid-gap: 1%;
+	 text-align: center;
+   height: 100%;
 }
 /* inventory/storage middle layer container */
  .item-container {
@@ -194,17 +209,6 @@ export default {
     max-height: 28em;
   }
 
-/* outer container */
- .hotbar-grid-container {
-	 display: grid;
-	 opacity: 0.6;
-	 background: #000;
-	 padding: 1% 1% 1% 1%;
-	 grid-gap: 1%;
-	 text-align: center;
-	 max-height: 30em;
-}
-/* inventory/storage middle layer container */
  .hotbar-item-container {
 	 display: grid;
 	 padding: 0.5em;
