@@ -1,10 +1,12 @@
 <script>
 import draggable from "vuedraggable";
+import Card from "../components/Card.vue";
 export default {
     name: 'Home',
     data () {
       return {
         item: {},
+        isInventory: true,
         list1: [
           { img: 'https://i.imgur.com/Yyr1zED.png', alt: 'Deagle' },
           { img: 'https://i.imgur.com/VDsFdmg.png', alt: 'Blue Waffle' },
@@ -18,7 +20,7 @@ export default {
       }
     },
     components: {
-      draggable
+      draggable, Card
     },
     methods: {
       onPress(item) {
@@ -36,6 +38,9 @@ export default {
         if(i !== -1) {
           this.list1.splice(i, 1)
         }
+      },
+      toTab(isInventory) {
+        this.isInventory = isInventory
       }
     }
 
@@ -43,12 +48,16 @@ export default {
 </script>
 
 <template>
-  <main class="container">
+  <div v-if="isInventory">
+    <main class="container">
     <section class="section">
       <div class="grid-container">
         <!-- section titles -->
 
-        <div class="title">Хранилище</div> 
+        <div class="title">
+          <span class="tab" @click="toTab(true)" :class="{active: isInventory}">Инвентарь</span>
+          <span class="tab" @click="toTab(false)" :class="{active: !isInventory}">Персонаж</span>
+        </div> 
         <!-- storage -->
         <draggable
           class="item-container"
@@ -66,7 +75,9 @@ export default {
 
       </div>
     </section>
-    <div class="title">Действия</div> 
+    <div class="title">
+      Действия
+    </div> 
         <!-- actions -->
     <div class="action-container">
       <!-- use -->
@@ -97,14 +108,26 @@ export default {
       </div>
     </section>
   </main>
+  </div>
+  <Card @toTab="toTab" v-else/>
+
 </template>
 <style scoped>
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
   overflow-y: auto;
+}
+.tab {
+  padding: 0px 20px;
+  cursor: pointer;
+  opacity: .6;
+}
+.tab.active {
+  opacity: 1;
 }
 .section {
   height: 50%;
