@@ -1,6 +1,22 @@
 @import './base.css';
 
-
+body {
+  background-size: cover;
+  background-image: url("https://e0.pxfuel.com/wallpapers/789/821/desktop-wallpaper-blur-blur-game.jpg");
+  background-repeat: no-repeat;
+  background-color: #111;
+  font-family: Helvetica, sans-serif;
+  color: #fff;
+ /* makes text unselectable */
+  -webkit-user-select: none;
+ /* Safari */
+  -moz-user-select: none;
+ /* Firefox */
+  -ms-user-select: none;
+ /* IE10+/Edge */
+  user-select: none;
+ /* Standard */
+}
 a,
 .green {
   text-decoration: none;
