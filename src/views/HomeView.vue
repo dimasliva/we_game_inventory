@@ -63,17 +63,17 @@ export default {
               </div>  
             </template>
           </draggable>
-          <div class="title">Действия</div> 
-        <!-- actions -->
-        <div class="action-container">
-          <!-- use -->
-          <button class="btn" @click="onUse">Использовать</button>
-          <!-- give -->
-          <button class="btn" @click="onUse">Выбросить</button>
-        </div>
+
       </div>
     </section>
-    
+    <div class="title">Действия</div> 
+        <!-- actions -->
+    <div class="action-container">
+      <!-- use -->
+      <button class="btn" @click="onUse">Использовать</button>
+      <!-- give -->
+      <button class="btn" @click="onUse">Выбросить</button>
+    </div>
     <!-- hotbar section -->
     <section class="section">
       <div class="hotbar-grid-container">
@@ -107,12 +107,14 @@ export default {
   overflow-y: auto;
 }
 .section {
-  height: 44%;
+  height: 50%;
 }
 .clicked {
   background-color: yellow;
 }
 .title {
+  text-align: center;
+  background-color: rgb(0, 0, 0, .6);
   color: white;
 }
 
@@ -180,7 +182,6 @@ export default {
 	 grid-template-columns: repeat(4, 1fr);
 	 grid-template-rows: auto;
 	 max-height: 25em;
-   min-height: 192px;
 }
 /* individual inventory items */
  .item-cell {
@@ -205,7 +206,7 @@ export default {
     display: flex;
     justify-content: space-between;
     padding: 4%;
-    background-color: #111;
+    background-color: rgb(17, 17, 17, .6);
     max-height: 28em;
   }
 
